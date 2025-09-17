@@ -1,0 +1,14 @@
+import.random
+
+partier = ["FRP", "Høyre", "SV", "SP"]
+prosent = [20,30,30,20]
+stemmer = [0,0,0,0]
+
+print(" , ".join(partier))
+
+stemmer_random = random.choices(partier,weights=prosent,k=1000)
+
+for i in range(len(partier)):
+    for j in range (len(stemmer_random)):
+        if stemmer_random[j] == partier[i]:
+            stemmer[i]+=1
